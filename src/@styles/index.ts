@@ -4,6 +4,7 @@ export const commonStyle = css`
   body {
     * {
       box-sizing: border-box;
+      font-family: "Pretendard";
     }
   }
 `;

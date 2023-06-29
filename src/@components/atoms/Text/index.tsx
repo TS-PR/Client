@@ -4,7 +4,7 @@ import { StyleProps, TextProps } from "~/@interfaces";
 export const Text = ({
   size = 1,
   weight = 400,
-  color = "Black",
+  color = "black",
   spacing = 0,
   font = "Pretendard",
   height = 120,

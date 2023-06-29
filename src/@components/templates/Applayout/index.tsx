@@ -13,4 +13,8 @@ export const Applayout = ({ children }: LayoutProp) => {
   );
 };
 
-const ApplayoutContainer = styled.main``;
+const ApplayoutContainer = styled.main`
+  max-width: 1920px;
+  margin: 0 auto;
+  position: relative;
+`;

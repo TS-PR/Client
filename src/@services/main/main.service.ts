@@ -1,22 +1,22 @@
+import { IDProp } from "~/@interfaces/api";
 import { MainApi } from "./main.api";
 
 const ContentService = {
-  getPreviewContent: async () => {
+  getContents: async (id: IDProp) => {
     try {
-      const result = await MainApi.get("/api/content/get");
+      const result = await MainApi.get("/api/post", { params: { id } });
 
       return result;
     } catch (e: any) {
       console.error(e);
-      alert(`게시글 조회에서 오류가 발생했습니다.(1) ${e.response?.data?.message}`);
     }
   },
-  getContentById: async (id: string) => {
+  getAllID: async () => {
     try {
-      const result = await MainApi.get(`/api/v1/content/contentById?id=${id}`);
+      const result = await MainApi.get("/api/post/id");
       return result;
-    } catch (e) {
-      console.error("게시글 조회에서 오류가 발생했습니다.(2)", e);
+    } catch (e: any) {
+      console.error(e);
     }
   },
 };
